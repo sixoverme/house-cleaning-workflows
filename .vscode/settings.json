@@ -1,0 +1,6 @@
+{
+    "githubPullRequests.experimental.chat": true,
+    "githubPullRequests.experimental.notificationsView": true,
+    "githubPullRequests.experimental.useQuickChat": true,
+    "githubIssues.assignWhenWorking": true
+}

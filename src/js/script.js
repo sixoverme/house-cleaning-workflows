@@ -1,17 +1,16 @@
-function toggleActive(event) {
-    const links = document.querySelectorAll('.sidebar a');
-    links.forEach(link => link.classList.remove('active'));
-    event.target.classList.add('active');
-}
-
+// Basic function to handle sidebar navigation
 document.addEventListener('DOMContentLoaded', () => {
-    const sidebarLinks = document.querySelectorAll('.sidebar a');
-    sidebarLinks.forEach(link => {
-        link.addEventListener('click', toggleActive);
+    const links = document.querySelectorAll('aside nav ul li a');
+    links.forEach(link => {
+        link.addEventListener('click', (event) => {
+            links.forEach(link => link.classList.remove('active'));
+            event.target.classList.add('active');
+        });
     });
 });
 
-// Placeholder for future API integration
-// function integrateWithGoogleOAuth() {}
-
-// function integrateWithGoogleSheets() {}
+// Placeholder function for future API integrations
+function initializeAPIs() {
+    // Google OAuth integration
+    // Google Sheets integration
+}

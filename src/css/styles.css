@@ -1,51 +1,70 @@
-body {
-    font-family: Arial, sans-serif;
+/* Basic reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
     background-color: #f4f4f4;
 }
 
 header {
-    background-color: #4a90e2;
+    background-color: #007BFF;
     color: white;
-    padding: 20px;
+    padding: 1rem;
     text-align: center;
 }
 
-.sidebar {
-    width: 250px;
-    background-color: #ffffff;
-    padding: 15px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    height: 100%;
+.container {
+    display: flex;
+    height: calc(100vh - 60px); /* Adjust height to account for header and footer */
 }
 
-.sidebar a {
-    display: block;
-    color: #333;
-    padding: 10px;
+aside {
+    background-color: #343a40;
+    color: white;
+    width: 200px;
+    padding: 1rem;
+}
+
+aside nav ul {
+    list-style: none;
+}
+
+aside nav ul li {
+    margin: 1rem 0;
+}
+
+aside nav ul li a {
+    color: white;
     text-decoration: none;
-    margin: 5px 0;
 }
 
-.sidebar a:hover {
-    background-color: #eaeaea;
+main {
+    flex: 1;
+    padding: 1rem;
 }
 
-.main-content {
-    margin-left: 270px;
-    padding: 20px;
+footer {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
-    .sidebar {
-        width: 100%;
-        position: relative;
-        height: auto;
+    .container {
+        flex-direction: column;
     }
 
-    .main-content {
-        margin-left: 0;
+    aside {
+        width: 100%;
     }
 }
